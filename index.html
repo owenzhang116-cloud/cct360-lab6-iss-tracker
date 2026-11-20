@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where Is the ISS?</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Where Is the ISS?</h1>
+            <p>I'm still at my desk. This thing keeps moving.</p>
+            <p class="intro">Follow the International Space Station as it travels around Earth.</p>
+        </header>
+
+        <p id="light-status">Waiting to find the space station...</p>
+
+        <figure>
+            <div id="map">
+                <img src="world-map.png" width="1600" height="800" alt="World map with north at the top and the Americas on the left.">
+                <span id="iss-dot" hidden aria-hidden="true"></span>
+            </div>
+            <figcaption>The red dot marks the point on Earth below the ISS.</figcaption>
+        </figure>
+
+        <section aria-labelledby="position-heading">
+            <h2 id="position-heading">Latest position</h2>
+            <dl class="readings">
+                <div><dt>Latitude</dt><dd id="latitude">--</dd></div>
+                <div><dt>Longitude</dt><dd id="longitude">--</dd></div>
+                <div><dt>Altitude</dt><dd id="altitude">--</dd></div>
+                <div><dt>Speed</dt><dd id="speed">--</dd></div>
+            </dl>
+        </section>
+
+        <div class="controls">
+            <button id="update-button" type="button">Update location</button>
+            <button id="auto-button" type="button">Pause auto update</button>
+        </div>
+        <p id="auto-status">Auto update: on, every 15 seconds.</p>
+        <p id="request-status" role="status">Getting the latest position...</p>
+        <p id="updated-time">Position time (UTC): waiting for data.</p>
+        <noscript><p>Please enable JavaScript to load the ISS position.</p></noscript>
+
+        <footer>
+            <p>Position estimates: <a href="https://wheretheiss.at/w/developer">Where the ISS at?</a></p>
+            <p>Map made with <a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth</a> public domain data.</p>
+        </footer>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px 16px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #202a35;
+    background-color: #edf0f4;
+}
+
+main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 28px;
+    background-color: white;
+    border: 1px solid #aeb7c2;
+}
+
+h1 {
+    margin: 0 0 6px;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 21px;
+    margin: 22px 0 8px;
+}
+
+header p {
+    margin: 8px 0;
+}
+
+.intro {
+    color: #4b5867;
+}
+
+#light-status {
+    padding: 12px;
+    margin: 22px 0 16px;
+    background-color: #edf0f4;
+    border-left: 4px solid #687a90;
+}
+
+figure {
+    margin: 0;
+}
+
+#map {
+    position: relative;
+    overflow: hidden;
+    outline: 1px solid #8b9aa6;
+}
+
+#map img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#iss-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: #c41c27;
+    box-shadow: 0 0 0 1px #7b0a12;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #4b5867;
+}
+
+.readings {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 0 0 22px;
+}
+
+.readings div {
+    padding: 8px 0;
+    border-bottom: 1px solid #c5ccd4;
+}
+
+dt {
+    font-size: 14px;
+    color: #4b5867;
+}
+
+dd {
+    margin: 4px 0 0;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 9px 14px;
+    font: inherit;
+    color: #202a35;
+    background-color: #e7edf4;
+    border: 1px solid #69798c;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d9e3ef;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+button:focus-visible, a:focus-visible {
+    outline: 3px solid #b24a00;
+    outline-offset: 3px;
+}
+
+#auto-status, #updated-time {
+    font-size: 14px;
+    color: #4b5867;
+    margin: 10px 0;
+}
+
+#request-status {
+    margin: 10px 0;
+}
+
+footer {
+    margin-top: 22px;
+    padding-top: 12px;
+    border-top: 1px solid #c5ccd4;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+a {
+    color: #164d8d;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    main {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .readings {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
